@@ -2,5 +2,5 @@ package com.akeshala.dto;
 
 public interface Event {
 
-    boolean checkEvent();
+    boolean checkEvent(Location location);
 }

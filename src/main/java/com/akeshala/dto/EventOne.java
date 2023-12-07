@@ -9,9 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class EventOne implements Event {
 
-    private Location location;
-
-    public boolean checkEvent(){
+    public boolean checkEvent(Location location) {
         return false;
     }
 }

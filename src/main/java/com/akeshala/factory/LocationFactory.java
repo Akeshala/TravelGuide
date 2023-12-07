@@ -37,9 +37,9 @@ public class LocationFactory {
 
     private static List<Park> createParks() {
         return List.of(
-                new Park("Viharamha Devi", 2200, 800),
-                new Park("National Park", 1700, 800),
-                new Park("Children's park", 1700, 800)
+                new Park("Viharamha Devi", 0.00, 2200, 800),
+                new Park("National Park", 0.00, 1700, 800),
+                new Park("Children's park", 0.00, 1700, 800)
         );
     }
 }
