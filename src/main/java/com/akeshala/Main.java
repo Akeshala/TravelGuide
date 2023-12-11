@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Location> locationsList = LocationFactory.createLocations();
+        ArrayList<Location> locationsList = LocationFactory.fetchLocations();
 
         // create an event to handle
         locationsList.stream()

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LocationFactory {
-    public static ArrayList<Location> createLocations() {
+    public static ArrayList<Location> fetchLocations() {
         ArrayList<Location> locations = new ArrayList<>();
 
         locations.addAll(createTheatres());
@@ -22,24 +22,24 @@ public class LocationFactory {
     private static List<Theatre> createTheatres() {
         return List.of(
                 new Theatre("Tower Hall", 12.23, 2200, 900),
-                new Theatre("New theatre", 10.50, 2100, 900),
-                new Theatre("Drama academy", 4.50, 2000, 900)
+                new Theatre("New Theatre", 10.50, 2100, 900),
+                new Theatre("Drama Academy", 4.50, 2000, 900)
         );
     }
 
     private static List<Museum> createMuseums() {
         return List.of(
-                new Museum("National museum", 4.50, 2200, 800),
-                new Museum("Galle museum", 0.00, 1800, 800),
-                new Museum("British museum", 2.00, 1700, 800)
+                new Museum("National Museum", 4.50, 2200, 800),
+                new Museum("Galle Museum", 0.00, 1800, 800),
+                new Museum("British Museum", 2.00, 1700, 800)
         );
     }
 
     private static List<Park> createParks() {
         return List.of(
-                new Park("Viharamha Devi", 0.00, 2200, 800),
+                new Park("Viharamaha Devi", 0.00, 2200, 800),
                 new Park("National Park", 0.00, 1700, 800),
-                new Park("Children's park", 0.00, 1700, 800)
+                new Park("Children's Park", 0.00, 1700, 800)
         );
     }
 }
