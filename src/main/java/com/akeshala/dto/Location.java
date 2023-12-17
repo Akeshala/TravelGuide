@@ -12,6 +12,8 @@ public abstract class Location {
     protected Time openingTime;
 
     public Location(String name, Double fee, Integer closingTime, Integer openingTime) {
+        if (closingTime <= openingTime)
+            throw new IllegalArgumentException("closingTime must be greater than openingTime");
         setName(name);
         setFee(fee);
         setClosingTime(closingTime);
