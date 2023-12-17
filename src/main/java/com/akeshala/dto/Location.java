@@ -9,31 +9,26 @@ import lombok.Setter;
 @Setter
 public abstract class Location {
     protected String name;
-    protected Double fee;
-    protected Integer closingTime;
-    protected Integer openingTime;
+    protected Fee fee;
+    protected Time closingTime;
+    protected Time openingTime;
 
     public Location(String name, Double fee, Integer closingTime, Integer openingTime) {
-        setFee(fee);
         setName(name);
+        setFee(fee);
         setClosingTime(closingTime);
         setOpeningTime(openingTime);
     }
 
     public void setClosingTime(Integer closingTime) {
-        if (closingTime < 0 || closingTime >= 2400)
-            throw new IllegalArgumentException("Time should be between 0 and 2400");
-        this.closingTime = closingTime;
+        this.closingTime = new Time(closingTime);
     }
 
     public void setOpeningTime(Integer openingTime) {
-        if (openingTime < 0 || openingTime >= 2400)
-            throw new IllegalArgumentException("Time should be between 0 and 2400");
-        this.openingTime = openingTime;
+        this.openingTime = new Time(openingTime);
     }
 
-    public void setFee(Double fee) {
-        if (fee < 0.00) throw new IllegalArgumentException("Fee can not be negative");
-        this.fee = fee;
+    public void setFee(Double amount) {
+        this.fee = new Fee(amount);
     }
 }

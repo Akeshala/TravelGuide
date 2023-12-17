@@ -12,7 +12,7 @@ public class Main {
 
         // create an event to handle
         locationsList.stream()
-                .filter(location -> location.getClosingTime() > 1900 && location.getFee() < 5)
+                .filter(location -> location.getClosingTime().getTime() > 1900 && location.getFee().getAmount() < 5)
                 .map(Location::getName)
                 .forEach(System.out::println);
     }
