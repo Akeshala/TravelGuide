@@ -12,7 +12,7 @@ public class Time {
     }
 
     public void setTime(Integer time) {
-        if (time < 0 || time >= 2400) throw new IllegalArgumentException("Time should be between 0 and 2400");
+        if (time < 0 || time > 2400) throw new IllegalArgumentException("Time should be between 0 and 2400");
         this.time = time;
     }
 }
