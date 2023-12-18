@@ -29,6 +29,6 @@ public abstract class Location {
     }
 
     public void setFee(Double amount) {
-        this.fee = new Fee(amount);
+        this.fee = new GeneralFee(amount);
     }
 }

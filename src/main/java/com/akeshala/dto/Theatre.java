@@ -8,7 +8,6 @@ public class Theatre extends Location {
 
     @Override
     public void setFee(Double amount) {
-        if (amount <= 0.00) throw new IllegalArgumentException("Theatre fee should be greater than zero");
-        super.setFee(amount);
+        this.fee = new NonZeroFee(amount);
     }
 }

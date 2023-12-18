@@ -3,9 +3,9 @@ package com.akeshala.dto;
 import lombok.Getter;
 
 @Getter
-public class Fee {
+public abstract class Fee {
 
-    private Double amount;
+    protected Double amount;
 
     public Fee(Double amount) {
         setAmount(amount);

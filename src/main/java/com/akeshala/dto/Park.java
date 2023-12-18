@@ -8,7 +8,6 @@ public class Park extends Location {
 
     @Override
     public void setFee(Double amount) {
-        if (amount != 0.00) throw new IllegalArgumentException("Theatre fee should be zero");
-        super.setFee(amount);
+        this.fee = new ZeroFee(amount);
     }
 }
