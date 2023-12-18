@@ -20,7 +20,7 @@ public class Main {
         locationsList.addAll(museumFactory.createMultiple());
 
         locationsList.stream()
-                .filter(location -> location.getClosingTime().getTime() > 1900 && location.getFee().getAmount() < 5)
+                .filter(location -> location.getClosingTime() > 1900 && location.getFee() < 5)
                 .map(Location::getName)
                 .forEach(System.out::println);
     }
